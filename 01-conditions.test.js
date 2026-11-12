@@ -18,7 +18,15 @@ describe("estPositif", () => {
 // Même pattern qu'estPositif — écris les 3 tests toi-même.
 // Cas à couvrir : un nombre pair, un nombre impair, zéro.
 describe("estPair", () => {
-  // à compléter
+  it("Retourne true pour un nombre pair", () => {
+    expect(estPair(4)).toBe(true)
+  })
+  it("Retourne false pour un nombre impair", () => {
+    expect(estPair(5)).toBe(false)
+  })
+  it("Retourne true si le nombre est égal à zero", () => {
+    expect(estPair(0)).toBe(true)
+  })
 })
 
 // Nouveau pattern : deux paramètres, cas d'égalité.
@@ -38,11 +46,36 @@ describe("max", () => {
 // Même pattern que max — écris les tests pour chaque mention.
 // Cas à couvrir : une note dans chaque tranche, et la valeur frontière 16.
 describe("mention", () => {
-  // à compléter
+  it("Retourne une erreur si la note est < 0 ou > à 20", () => {
+    expect(mention(21)).toBe("Erreur, veuillez rentrer une note valide")
+  })
+  it("Retourne très bien si la note est entre 16 et 20 inclus", () => {
+    expect(mention(17)).toBe("Très bien")
+  })
+  it("Retourne Bien si la note est 14 ou 15", () => {
+    expect(mention(14)).toBe("Bien")
+  })
+  it("Retourne Assez bien si la note est 12 ou 13", () => {
+    expect(mention(12)).toBe("Assez bien")
+  })
+  it("Retourne Passable si la note est 10 ou 11", () => {
+    expect(mention(11)).toBe("Passable")
+  })
+  it("Retourne Insuffisant si la note est < à 10", () => {
+    expect(mention(7)).toBe("Insuffisant")
+  })
 })
 
 // [FACULTATIF] Même pattern — à toi.
 // Cas à couvrir : multiple de 3, multiple de 5, multiple des deux, autre.
 describe("fizzbuzz", () => {
-  // à compléter
+  it("retourne FizzBuzz si le nombre est divisible par 3 et 5", () => {
+    expect(fizzbuzz(15)).toBe("FizzBuzz")
+  })
+  it("retourne Fizz si le nombre est divisible par 3", () => {
+    expect(fizzbuzz(6)).toBe("Fizz")
+  })
+  it("retourne Buzz si le nombre est divisible par 5", () => {
+    expect(fizzbuzz(10)).toBe("Buzz")
+  })
 })
