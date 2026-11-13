@@ -130,3 +130,7 @@ calc ← 1
     FIN POUR
     RETOURNER calc
 FIN
+
+
+## Exercice 9
+
